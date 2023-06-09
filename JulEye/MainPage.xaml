@@ -1,0 +1,50 @@
+﻿<Page x:Class="JulEye.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JulEye"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="#EDF7B4">
+        <Rectangle Name="TitleContainer" Fill="#D9D9D9" HorizontalAlignment="Center" Height="53" VerticalAlignment="Top" Width="714" RenderTransformOrigin="0.5,0.5" Margin="0,24,0,0">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label x:Name="ProgramTitle" Content="Оценивание показателей эффективности алгоритмов идентификации лиц" HorizontalAlignment="Left" Margin="125,24,0,0" VerticalAlignment="Top" Width="613" Height="53" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Resources\\LexendDeca-Regular.ttf" FontSize="17" Foreground="#2C7E79">
+            <Label.BitmapEffect>
+                <DropShadowBitmapEffect ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5"/>
+            </Label.BitmapEffect>
+        </Label>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="53" Margin="24,24,0,0" VerticalAlignment="Top" Width="101" Source="/Resources/logo.jpg" Stretch="Fill"/>
+        
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="CalculateButton" Background="#0BC598" Content="Вычислить" Click="CalculateButton_Click" HorizontalAlignment="Center" Margin="0,-180,0,0" VerticalAlignment="Center" Height="65" Width="334" FontFamily="Resources\\LexendDeca-Regular.ttf" FontSize="20" Foreground="#FFFFFF">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5"/>
+            </Button.BitmapEffect>
+        </Button>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="HistoryButton" Background="#0BC598" Content="История работы" Click="HistoryButton_Click" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Center" Height="65" Width="334" FontFamily="Resources\\LexendDeca-Regular.ttf" FontSize="20" Foreground="#FFFFFF">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5"/>
+            </Button.BitmapEffect>
+        </Button>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="AboutProgramButton" Background="#0BC598" Content="О программе" Click="AboutProgramButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="65" Width="334" FontFamily="Resources\\LexendDeca-Regular.ttf" FontSize="20" Foreground="#FFFFFF" Margin="0,200,0,0">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5"/>
+            </Button.BitmapEffect>
+        </Button>
+        <Button x:Name="ExitButton" BorderThickness="0.5" Background="#D9D9D9" Content="Выход" Click="ExitButton_Click" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Center" Height="35" Width="150" FontFamily="Resources\\LexendDeca-Regular.ttf" FontSize="18" Foreground="#2C7E79">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5"/>
+            </Button.BitmapEffect>
+        </Button>
+    </Grid>
+</Page>
